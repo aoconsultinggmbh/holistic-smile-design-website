@@ -115,3 +115,20 @@ Karte lädt nach Zustimmung.
 
 - Erreichbarkeit ohne „in der Regel": Mo–Do 08:00–18:00 Uhr, Fr 08:00–15:00 Uhr (Vorgabe Ovidiu).
 - Hero entschlackt: Fakten-Zeile unter den Knöpfen entfernt, Einleitungssatz ohne Meister/Master, Namensschild nur „Inhaber und Zahntechnikermeister", Überzeile „Digitale Zahntechnik". Die Vertrauensleiste trägt jetzt 98 % digital, Master, Fertigung und Erreichbarkeit, jede Angabe genau einmal.
+
+## Änderung 2 vom 30.09.2026 (Rückmeldung Frank Köpp, 29.09.)
+
+Eingebaut: Darstellungsfehler Handy bei Leistungen 01/02 behoben (Bild in der breiten Karte hatte
+eine Prozent-Höhe). Kernkompetenz Backward Planning als Karte 01 und neue Unterseite
+`backward-planning-norderstedt.html`. Frank Köpp überall als M.Sc. (Master of Science).
+Instagram-Knopf (Kopf, Fußzeile, Kontakt, JSON-LD): https://www.instagram.com/holistic_smile_design/
+Neue Team-Seite `team.html` mit sechs Fotos aus der picdrop-Galerie von Filmox Media
+(Originale unter kunden-bilder/holistic-smile-design/2026-09-30-teamfotos-picdrop).
+Teleskoparbeiten zeigen vorerst das Teleskopgerüst-Foto.
+
+Offen beim Kunden:
+- Vornamen und Rollen der fünf Mitarbeitenden für team.html (gelbe Platzhalter im Generator, TEAM-Liste).
+- Zuordnung der Fotos zu den Personen bestätigen, auch das Porträt von Frank Köpp.
+- Echte Fotos von Teleskoparbeiten liefern (Karte 02 und Unterseite Teleskoparbeiten).
+- Fachliche Freigabe der Texte zu Backward Planning (Ablaufschritte Wax-up, Mock-up, Gesichtsscanner, Smilecloud).
+- Bildnachweis: Teamfotos stammen von Filmox Media GmbH, im Impressum steht bisher AO Consulting. Beim Gespräch klären.
