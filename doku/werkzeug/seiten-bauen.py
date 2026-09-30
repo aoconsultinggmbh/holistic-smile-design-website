@@ -5,11 +5,12 @@ Kopf, Fußzeile und Einwilligungs-Konfiguration werden aus index.html übernomme
 damit alle Seiten identisch bleiben. Jede Handkorrektur an Unterseiten gehört
 in dieses Skript, sonst überschreibt der nächste Lauf sie.
 
-Aufruf im Projektordner:  python3 werkzeug/seiten-bauen.py
+Aufruf von überall:  python3 doku/werkzeug/seiten-bauen.py
+Das Skript liegt in doku/werkzeug/, die Seite in website/. Es schreibt immer nach website/.
 """
 import re, os, json, html
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'website')
 os.chdir(ROOT)
 src = open('index.html', encoding='utf-8').read()
 
@@ -29,11 +30,48 @@ ph = lambda t: f'<span class="ph">[PLATZHALTER: {t}]</span>'
 # ---------------------------------------------------------------------------
 LEISTUNGEN = [
   dict(
+    datei='backward-planning-norderstedt.html',
+    kurz='Backward Planning',
+    title='Backward Planning Norderstedt | Komplexe Sanierung digital geplant',
+    desc='Komplexe Sanierungen mit Backward Planning vom Meisterlabor in Norderstedt: Fotoshooting, Gesichtsscan und KI-gestützte Visualisierung mit Smilecloud, damit Praxis und Patient das Ergebnis vor der Behandlung sehen.',
+    kicker='Leistung 01, Kernkompetenz',
+    ablauf_h2='So läuft eine komplexe Sanierung mit Backward Planning bei Holistic Smile Design',
+    h1='Backward Planning aus Norderstedt: Komplexe Sanierungen vom Ergebnis her geplant',
+    intro='Die Kernkompetenz von Holistic Smile Design ist die komplexe Sanierung mit Backward Planning. Zuerst wird das angestrebte Ergebnis festgelegt, dann wird von dort aus rückwärts jeder Behandlungsschritt geplant. Fotoshooting, Gesichtsscanner und KI-gestützte Werkzeuge wie Smilecloud zeigen dem Patienten schon vor der Behandlung, wie sein Lächeln aussehen könnte. Ein Bild sagt mehr als tausend Worte.',
+    hero='fotodokumentation-zahnfarbe-dentallabor-norderstedt',
+    hero_alt='Fotodokumentation im Fotostudio des Dentallabors Holistic Smile Design in Norderstedt als Grundlage für das Backward Planning',
+    fuer_h2='Was Zahnarztpraxen vom Backward Planning bei Holistic Smile Design haben',
+    fuer=[
+      ('Das Ergebnis zuerst', 'Ästhetik, Funktion und Bisslage werden am Anfang gemeinsam festgelegt. Jeder weitere Schritt leitet sich aus diesem Ziel ab.'),
+      ('Visualisierung für den Patienten', 'Aus Fotoshooting und Gesichtsscan entsteht mit KI-gestützten Werkzeugen wie Smilecloud eine Vorschau auf das geplante Lächeln, noch vor der ersten Präparation.'),
+      ('Ein Plan für alle Beteiligten', 'Praxis, Chirurgie und Labor arbeiten mit demselben Datensatz. Provisorium, Schablonen und definitive Versorgung passen zueinander.'),
+      ('Sichere Entscheidungen', 'Patienten sehen, wofür sie sich entscheiden. Das erleichtert die Beratung in der Praxis und die Zustimmung zu umfangreichen Sanierungen.'),
+    ],
+    ablauf=[
+      ('Fotoshooting und Gesichtsscan', 'Der Patient kommt für standardisierte Aufnahmen und einen Gesichtsscan ins Labor nach Norderstedt oder die Praxis liefert Fotos, Intraoralscan und DVT.'),
+      ('Digitale Vorschau', 'Holistic Smile Design erstellt mit KI-gestützten Werkzeugen wie Smilecloud eine Visualisierung des angestrebten Ergebnisses und stimmt sie mit Praxis und Patient ab.'),
+      ('Rückwärts geplant', 'Aus dem freigegebenen Ergebnis werden Wax-up, Mock-up, Präparationshilfen, Provisorium und bei Bedarf Implantatschablonen abgeleitet.'),
+      ('Umsetzung Schritt für Schritt', 'Die Sanierung folgt dem Plan. Jede Zwischenstufe wird mit der Vorschau abgeglichen, bis die definitive Versorgung eingegliedert ist.'),
+    ],
+    technik_h2='Fotostudio, Gesichtsscanner und KI-Werkzeuge im eigenen Haus',
+    technik=('Backward Planning funktioniert nur mit guten Daten. Holistic Smile Design arbeitet deshalb mit einem eigenen Fotostudio für standardisierte Aufnahmen, einem Gesichtsscanner und KI-gestützten Planungswerkzeugen wie Smilecloud. Fotos, Scan und DVT werden zu einem Datensatz zusammengeführt, aus dem Vorschau, Provisorium und definitive Versorgung entstehen.', 'Frank Köpp ist Zahntechnikermeister und Master of Science (M.Sc.) in Digitaler Dentaltechnologie. Die komplexe Sanierung mit Backward Planning ist die Kernkompetenz seines Labors.'),
+    technik_bild='cad-planung-implantatprothetik-bildschirm-norderstedt',
+    technik_alt='Digitale Planung einer Versorgung am Bildschirm im Dentallabor Norderstedt',
+    bild2='zahnfarbe-bestimmen-vita-farbring-dentallabor-norderstedt',
+    bild2_alt='Zahnfarbbestimmung mit Farbring als Teil der Planung im Labor',
+    faq=[
+      ('Welches Dentallabor bei Hamburg plant komplexe Sanierungen mit Backward Planning?', 'Holistic Smile Design in der Oststraße 120, 22844 Norderstedt, hat die komplexe Sanierung mit Backward Planning als Kernkompetenz. Das Labor arbeitet mit Zahnarztpraxen in Norderstedt, Hamburg und ganz Deutschland zusammen und ist montags bis donnerstags von 8 bis 18 Uhr und freitags von 8 bis 15 Uhr unter 040 94369370 erreichbar.'),
+      ('Was ist Backward Planning in der Zahntechnik?', 'Backward Planning bedeutet, eine Versorgung vom gewünschten Endergebnis her zu planen. Zuerst werden Ästhetik, Funktion und Bisslage festgelegt, dann wird rückwärts abgeleitet, welche Schritte, Provisorien und Hilfsmittel nötig sind. So passen alle Zwischenschritte zum Ziel, statt dass das Ergebnis am Ende dem Zufall überlassen bleibt.'),
+      ('Wie sieht der Patient das Ergebnis vor der Behandlung?', 'Holistic Smile Design fertigt aus Fotoshooting und Gesichtsscan mit KI-gestützten Werkzeugen wie Smilecloud eine Visualisierung des geplanten Lächelns. Der Patient sieht auf einem Bild, wie das Ergebnis aussehen könnte, bevor der erste Zahn beschliffen wird.'),
+      ('Muss der Patient dafür ins Labor kommen?', 'Für Fotoshooting und Gesichtsscan kann der Patient ins Labor nach Norderstedt kommen. Alternativ übermittelt die Praxis Fotos, Intraoralscan und DVT digital. Welcher Weg im Einzelfall sinnvoll ist, klärt Holistic Smile Design vorab mit der Praxis.'),
+    ],
+  ),
+  dict(
     datei='teleskoparbeiten-norderstedt.html',
     kurz='Teleskoparbeiten',
     title='Teleskoparbeiten Norderstedt | Teleskopprothesen für Zahnarztpraxen',
     desc='Teleskoparbeiten vom Meisterlabor in Norderstedt: Primärteile digital konstruiert und gefräst, Sekundärstrukturen präzise angepasst. Für Zahnarztpraxen in Hamburg und ganz Deutschland.',
-    kicker='Leistung 01',
+    kicker='Leistung 02',
     h1='Teleskoparbeiten aus Norderstedt: Präzision für herausnehmbaren Zahnersatz',
     intro='Teleskopprothesen sind der Schwerpunkt von Holistic Smile Design. Das Labor konstruiert Primärteile digital, fräst sie im eigenen Haus und passt die Sekundärstrukturen so an, dass die Arbeit spannungsfrei sitzt und angenehm hält. Zahnarztpraxen in Norderstedt, Hamburg und ganz Deutschland erhalten Teleskoparbeiten aus einer Hand, von der Planung bis zur Eingliederungsbegleitung.',
     hero='teleskopgeruest-zahntechniker-dentallabor-norderstedt',
@@ -52,7 +90,7 @@ LEISTUNGEN = [
       ('Fertigstellung', 'Nach Ihrer Einprobe erfolgen Fertigstellung, Politur und Endkontrolle. Bei Fragen zur Eingliederung ist das Labor direkt erreichbar.'),
     ],
     technik_h2='Digital gefräst, von Hand aufgepasst',
-    technik=('Primärkronen entstehen bei Holistic Smile Design im CAD/CAM-Verfahren. Das sorgt für parallele Friktionsflächen, reproduzierbare Wandstärken und eine Einschubrichtung, die exakt der Planung entspricht. Die Sekundärteile werden anschließend von Hand aufgepasst, denn hier entscheidet das Gefühl des Zahntechnikers über Halt und Tragekomfort.', 'Frank Köpp ist Zahntechnikermeister und hat den Master in Digitaler Dentaltechnologie an der Universität Greifswald abgeschlossen. Teleskoparbeiten sind bei Holistic Smile Design der Schwerpunkt des Labors.'),
+    technik=('Primärkronen entstehen bei Holistic Smile Design im CAD/CAM-Verfahren. Das sorgt für parallele Friktionsflächen, reproduzierbare Wandstärken und eine Einschubrichtung, die exakt der Planung entspricht. Die Sekundärteile werden anschließend von Hand aufgepasst, denn hier entscheidet das Gefühl des Zahntechnikers über Halt und Tragekomfort.', 'Frank Köpp ist Zahntechnikermeister und Master of Science (M.Sc.) in Digitaler Dentaltechnologie, abgeschlossen an der Universität Greifswald. Teleskoparbeiten sind bei Holistic Smile Design der Schwerpunkt des Labors.'),
     technik_bild='teleskoparbeit-handarbeit-zahntechniker-norderstedt',
     technik_alt='Zahntechniker prüft eine Teleskoparbeit unter der Lupe',
     bild2='artikulator-implantatmodell-dentallabor-norderstedt',
@@ -69,7 +107,7 @@ LEISTUNGEN = [
     kurz='All-on-4 und All-on-6',
     title='All-on-4 und All-on-6 Norderstedt | Implantatprothetik für Zahnärzte',
     desc='Implantatprothetik nach dem All-on-4- und All-on-6-Konzept vom Dentallabor in Norderstedt: digitale Planung, Provisorium und definitive Versorgung für Zahnarztpraxen in Hamburg und ganz Deutschland.',
-    kicker='Leistung 02',
+    kicker='Leistung 03',
     h1='All-on-4 und All-on-6 aus Norderstedt: Festsitzende Versorgung des zahnlosen Kiefers',
     intro='Holistic Smile Design plant und fertigt festsitzende Versorgungen auf vier oder sechs Implantaten. Von der Implantatplanung über die Schablone und das Provisorium bis zur definitiven Brücke kommt alles aus einem digitalen Datensatz. Zahnarztpraxen in Norderstedt und Hamburg arbeiten damit mit einem Ansprechpartner für die gesamte Versorgung.',
     hero='cad-planung-implantatprothetik-bildschirm-norderstedt',
@@ -97,7 +135,7 @@ LEISTUNGEN = [
       ('Welches Dentallabor in der Nähe von Hamburg fertigt All-on-4-Versorgungen?', 'Holistic Smile Design in Norderstedt, Oststraße 120, plant und fertigt All-on-4- und All-on-6-Versorgungen für Zahnarztpraxen in Hamburg, Norderstedt und ganz Deutschland. Das Labor ist montags bis donnerstags von 8 bis 18 Uhr und freitags von 8 bis 15 Uhr unter 040 94369370 erreichbar.'),
       ('Was bedeutet All-on-4?', 'All-on-4 ist ein Behandlungskonzept, bei dem ein zahnloser Kiefer mit einer festsitzenden Brücke auf vier Implantaten versorgt wird. Die hinteren Implantate werden dabei angewinkelt gesetzt, um Knochen zu nutzen und Knochenaufbau zu vermeiden. All-on-6 arbeitet nach demselben Prinzip mit sechs Implantaten.'),
       ('Fertigt Holistic Smile Design auch das Sofortprovisorium?', 'Ja. Das Provisorium entsteht bei Holistic Smile Design aus derselben digitalen Planung wie die Schablone und kann am Tag der Implantation eingegliedert werden.'),
-      ('Unterstützt das Labor bei der Planung?', 'Holistic Smile Design plant Implantatpositionen gemeinsam mit der Praxis von der Prothetik her und stimmt die Planung vor der Fertigung ab. Inhaber Frank Köpp ist Zahntechnikermeister mit Master in Digitaler Dentaltechnologie.'),
+      ('Unterstützt das Labor bei der Planung?', 'Holistic Smile Design plant Implantatpositionen gemeinsam mit der Praxis von der Prothetik her und stimmt die Planung vor der Fertigung ab. Inhaber Frank Köpp ist Zahntechnikermeister und Master of Science (M.Sc.) in Digitaler Dentaltechnologie.'),
     ],
   ),
   dict(
@@ -105,7 +143,7 @@ LEISTUNGEN = [
     kurz='Implantatschablonen',
     title='Implantatschablonen und Stackable Guides Norderstedt | Guided Surgery',
     desc='Bohrschablonen und Stackable Guides aus dem 3D-Drucker vom Dentallabor in Norderstedt. Digitale Implantatplanung auf Basis von DVT und Intraoralscan für Zahnarztpraxen in Hamburg und ganz Deutschland.',
-    kicker='Leistung 03',
+    kicker='Leistung 04',
     h1='Implantatschablonen und Stackable Guides aus Norderstedt',
     intro='Holistic Smile Design fertigt Bohrschablonen für die geführte Implantation und mehrteilige Stackable Guides für die Versorgung des zahnlosen Kiefers. Grundlage ist die digitale Planung aus DVT und Intraoralscan, gedruckt wird im eigenen 3D-Drucker in Norderstedt.',
     hero='implantatschablone-3d-druck-nachbearbeitung-norderstedt',
@@ -141,7 +179,7 @@ LEISTUNGEN = [
     kurz='Vollkeramik',
     title='Vollkeramik Norderstedt | Kronen, Brücken und Veneers für Zahnärzte',
     desc='Vollkeramische Kronen, Brücken und Veneers vom Meisterlabor in Norderstedt: digital konstruiert, im Haus gefräst, von Hand individualisiert. Für Zahnarztpraxen in Hamburg und ganz Deutschland.',
-    kicker='Leistung 04',
+    kicker='Leistung 05',
     h1='Vollkeramik aus Norderstedt: Kronen, Brücken und Veneers, die nicht auffallen',
     intro='Holistic Smile Design fertigt vollkeramischen Zahnersatz aus Zirkonoxid und Glaskeramik. Die Konstruktion erfolgt digital, gefräst wird im eigenen Haus, die Individualisierung übernimmt das Team von Hand. Für Zahnarztpraxen in Norderstedt und Hamburg, die metallfreien Zahnersatz mit natürlicher Wirkung erwarten.',
     hero='vollkeramik-individualisierung-pinsel-dentallabor-norderstedt',
@@ -177,7 +215,7 @@ LEISTUNGEN = [
     kurz='Digitaler Workflow',
     title='Digitales Dentallabor Norderstedt | Intraoralscan, CAD/CAM und 3D-Druck',
     desc='Holistic Smile Design arbeitet zu 98 Prozent digital: Intraoralscan, DVT, CAD-Planung, CAD/CAM-Fräsen und 3D-Druck im eigenen Haus. Digitales Dentallabor für Zahnarztpraxen in Norderstedt und Hamburg.',
-    kicker='Leistung 05',
+    kicker='Leistung 06',
     h1='Digitales Dentallabor in Norderstedt: Vom Intraoralscan bis zur fertigen Arbeit',
     intro='Holistic Smile Design ist zu 98 Prozent digital aufgestellt. Scandaten, DVT und Fotodokumentation laufen in einer durchgängigen CAD-Planung zusammen, gefertigt wird auf der eigenen Fräsmaschine und im 3D-Drucker. Für Zahnarztpraxen bedeutet das reproduzierbare Passung, kurze Abstimmungswege und nachvollziehbare Daten zu jeder Arbeit.',
     hero='zahntechnikermeister-cad-arbeitsplatz-norderstedt',
@@ -195,8 +233,8 @@ LEISTUNGEN = [
       ('Fertigung', 'Gerüste, Kronen und Primärteile werden gefräst, Modelle, Schablonen und Provisorien gedruckt.'),
       ('Handarbeit und Kontrolle', 'Individualisierung, Politur und Endkontrolle übernimmt das Team von Hand, bevor die Arbeit in Ihre Praxis geht.'),
     ],
-    technik_h2='Meister und Master: Digitale Dentaltechnologie mit Handwerk',
-    technik=('Inhaber Frank Köpp ist Zahntechnikermeister und hat berufsbegleitend den Master in Digitaler Dentaltechnologie an der Universität Greifswald abgeschlossen. Dieses Wissen prägt den Workflow des Labors: digital, wo es Präzision und Reproduzierbarkeit bringt, handwerklich, wo das Ergebnis davon profitiert.', 'Die Fotodokumentation im eigenen Fotostudio ergänzt den Datensatz um Farbe und Ästhetik. So entstehen Arbeiten, die nicht nur passen, sondern auch natürlich wirken.'),
+    technik_h2='Meister und Master of Science: Digitale Dentaltechnologie mit Handwerk',
+    technik=('Inhaber Frank Köpp ist Zahntechnikermeister und Master of Science (M.Sc.). Den Masterstudiengang Digitale Dentaltechnologie hat er berufsbegleitend an der Universität Greifswald abgeschlossen. Dieses Wissen prägt den Workflow des Labors: digital, wo es Präzision und Reproduzierbarkeit bringt, handwerklich, wo das Ergebnis davon profitiert.', 'Die Fotodokumentation im eigenen Fotostudio ergänzt den Datensatz um Farbe und Ästhetik. So entstehen Arbeiten, die nicht nur passen, sondern auch natürlich wirken.'),
     technik_bild='fotodokumentation-zahnfarbe-dentallabor-norderstedt',
     technik_alt='Fotodokumentation einer zahntechnischen Arbeit im Fotostudio des Labors',
     bild2='intraoralscanner-digitaler-workflow-dentallabor-norderstedt',
@@ -237,7 +275,7 @@ def kopf(title, desc, canonical, robots='index,follow', extra=''):
 <link rel="preload" href="fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/einwilligung.css?v=1">
 <link rel="stylesheet" href="assets/barrierefreiheit.css?v=1">
-<link rel="stylesheet" href="assets/stil.css?v=1">
+<link rel="stylesheet" href="assets/stil.css?v=2">
 {konf}
 {extra}
 </head>
@@ -333,7 +371,7 @@ for l in LEISTUNGEN:
   <div class="container">
     <div class="kopfzeile">
       <span class="kicker">Ablauf</span>
-      <h2 id="h-ablauf">So läuft eine {html.escape(l['kurz'])}-Versorgung mit Holistic Smile Design</h2>
+      <h2 id="h-ablauf">{html.escape(l.get('ablauf_h2', 'So läuft eine ' + l['kurz'] + '-Versorgung mit Holistic Smile Design'))}</h2>
     </div>
     <ol class="schritte" style="list-style:none;padding:0;margin:0">{ablauf}</ol>
   </div>
@@ -385,6 +423,7 @@ for l in LEISTUNGEN:
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><a href="tel:+494094369370">040 94369370</a><small>Mo–Do 08:00–18:00 Uhr, Fr 08:00–15:00 Uhr</small></div></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><a href="mailto:info@holistic-smile-design.de">info@holistic-smile-design.de</a><small>Für Anfragen und Auftragsdaten</small></div></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div>Oststraße 120<br>22844 Norderstedt<small>Industriegebiet Norderstedt</small></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><div><a href="https://www.instagram.com/holistic_smile_design/" rel="noopener" target="_blank">@holistic_smile_design</a><small>Einblicke ins Labor auf Instagram</small></div></li>
       </ul>
     </div>
     {formular()}
@@ -450,10 +489,10 @@ rechtsseite('datenschutz.html', 'Datenschutzerklärung', 'Datenschutzerklärung 
 <h2>6. Kontaktformular, E-Mail und Telefon</h2>
 <p>Wenn Sie uns über das Kontaktformular, per E-Mail oder telefonisch kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Daten (Praxisname, Name, Telefonnummer, E-Mail-Adresse, Interessen, Nachricht) zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf eine Zusammenarbeit zielt, sonst Art. 6 Abs. 1 lit. f DSGVO. Die Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
 <p>Das Formular wird über {ph('Versandweg, z. B. PHP-Skript des Hosters oder Formulardienst mit Anbieter')} verschickt.</p>
-<h2>7. Links zu Google</h2>
-<p>Die Website verlinkt auf unser Unternehmensprofil bei Google. Erst mit dem Klick auf den Link verlassen Sie unsere Website, dann gelten die Datenschutzbestimmungen von Google.</p>
+<h2>7. Links zu Google und Instagram</h2>
+<p>Die Website verlinkt auf unser Unternehmensprofil bei Google und auf unser Profil bei Instagram (Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland). Es handelt sich um einfache Links, nicht um Einbettungen: Beim Aufruf unserer Website werden keine Daten an Google oder Meta übertragen. Erst mit dem Klick auf einen Link verlassen Sie unsere Website, dann gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
 <h2>8. Empfänger und Auftragsverarbeiter</h2>
-<p>Hoster (siehe Ziffer 2), Google (nur nach Einwilligung, Ziffer 5, oder nach Klick auf einen Link, Ziffer 7). Eine Übermittlung an weitere Dritte findet nicht statt.</p>
+<p>Hoster (siehe Ziffer 2), Google (nur nach Einwilligung, Ziffer 5, oder nach Klick auf einen Link, Ziffer 7), Meta (nur nach Klick auf den Instagram-Link, Ziffer 7). Eine Übermittlung an weitere Dritte findet nicht statt.</p>
 <h2>9. Ihre Rechte</h2>
 <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21 DSGVO). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Sie haben außerdem das Recht, sich bei einer Aufsichtsbehörde zu beschweren. Zuständig ist das Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein (ULD), Holstenstraße 98, 24103 Kiel.</p>
 <h2>10. Stand</h2>
@@ -475,10 +514,106 @@ rechtsseite('barrierefreiheit.html', 'Erklärung zur Barrierefreiheit', 'Erklär
 <p>Diese Erklärung wurde am {ph('Datum')} erstellt.</p>
 """)
 
+# ---------------------------------------------------------------------------
+# Team-Seite
+# Vornamen und Rollen kommen vom Kunden. Bis dahin stehen gelbe Platzhalter.
+# Die Zuordnung Foto zu Person muss der Kunde bestätigen, auch bei Frank Köpp.
+# ---------------------------------------------------------------------------
+TEAM = [
+  dict(bild='team-frank-koepp-zahntechnikermeister-dentallabor-norderstedt', name='Frank', rolle='Inhaber, Zahntechnikermeister, M.Sc.',
+       text='Zahntechnikermeister und Master of Science in Digitaler Dentaltechnologie. Frank hat Holistic Smile Design 2023 gegründet und plant komplexe Sanierungen mit Backward Planning, von der ersten Visualisierung bis zur Eingliederung.',
+       alt='Frank Köpp, Inhaber und Zahntechnikermeister von Holistic Smile Design in Norderstedt', inhaber=True),
+  dict(bild='team-zahntechnikerin-3-dentallabor-norderstedt', name=None, rolle=None, alt='Mitarbeiterin von Holistic Smile Design im Dentallabor in Norderstedt'),
+  dict(bild='team-zahntechniker-1-dentallabor-norderstedt', name=None, rolle=None, alt='Mitarbeiter von Holistic Smile Design im Dentallabor in Norderstedt'),
+  dict(bild='team-zahntechnikerin-2-dentallabor-norderstedt', name=None, rolle=None, alt='Mitarbeiterin von Holistic Smile Design im Dentallabor in Norderstedt'),
+  dict(bild='team-zahntechniker-4-dentallabor-norderstedt', name=None, rolle=None, alt='Mitarbeiter von Holistic Smile Design im Dentallabor in Norderstedt'),
+]
+
+def teamseite():
+    karten = []
+    for t in TEAM:
+        name = html.escape(t['name']) if t['name'] else ph('Vorname')
+        rolle = html.escape(t['rolle']) if t['rolle'] else ph('Rolle, z. B. Zahntechnikerin')
+        text = f"<p>{html.escape(t['text'])}</p>" if t.get('text') else ''
+        kl = ' person-inhaber' if t.get('inhaber') else ''
+        karten.append(f'<li class="person{kl}">{bild(t["bild"], t["alt"], 1200, 1500)}<div class="person-text"><span class="rolle">{rolle}</span><h2>{name}</h2>{text}</div></li>')
+    body = f"""
+<section class="uhero" aria-labelledby="h1">
+  <div class="container uhero-innen">
+    <div>
+      <nav class="brot" aria-label="Brotkrumen"><ol><li><a href="index.html">Startseite</a></li><li aria-current="page">Team</li></ol></nav>
+      <span class="kicker">Das Team</span>
+      <h1 id="h1">Das Team von Holistic Smile Design in Norderstedt</h1>
+      <p class="lead">Ein Team, ein Anspruch: Zahnersatz, der passt und natürlich wirkt. Hier lernen Sie kennen, wer bei Holistic Smile Design plant, fräst, druckt und von Hand vollendet. Für jede Praxis gibt es einen festen Ansprechpartner.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#kontakt">Kennenlerntermin anfragen
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-insta" href="https://www.instagram.com/holistic_smile_design/" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Auf Instagram folgen</a>
+      </div>
+    </div>
+    <div class="uhero-bild breit">{bild('team-holistic-smile-design-gruppenbild-dentallabor-norderstedt', 'Das Team von Holistic Smile Design im Dentallabor in Norderstedt', 1800, 1200, lazy=False)}</div>
+  </div>
+</section>
+
+<section class="sektion dunkel" aria-labelledby="h-team">
+  <div class="container">
+    <div class="kopfzeile">
+      <span class="kicker">Wer hier arbeitet</span>
+      <h2 id="h-team">Meisterhand und <span class="script">Digital</span> in einem Team</h2>
+      <p>Holistic Smile Design ist ein inhabergeführtes Meisterlabor. Alle Arbeiten entstehen im eigenen Haus in Norderstedt, geplant am Bildschirm und vollendet von Hand.</p>
+    </div>
+    <ul class="team-raster">{''.join(karten)}</ul>
+  </div>
+</section>
+
+<section class="sektion creme" aria-labelledby="h-werte">
+  <div class="container">
+    <div class="kopfzeile">
+      <span class="kicker">So arbeiten wir</span>
+      <h2 id="h-werte">Was Praxen von der Zusammenarbeit mit dem Team erwarten können</h2>
+    </div>
+    <ol class="schritte" style="list-style:none;padding:0;margin:0">
+      <li class="schritt"><h3>Fester Ansprechpartner</h3><p>Jede Praxis hat eine Person im Labor, die den Fall kennt und Rückfragen direkt beantwortet.</p></li>
+      <li class="schritt"><h3>Digital geplant</h3><p>98 Prozent der Aufträge kommen digital ins Labor. Planung und Fertigung laufen in einem Datensatz.</p></li>
+      <li class="schritt"><h3>Von Hand vollendet</h3><p>Individualisierung, Politur und Endkontrolle übernimmt das Team von Hand, bevor eine Arbeit das Haus verlässt.</p></li>
+      <li class="schritt"><h3>Kurze Wege</h3><p>Fotoshooting, Farbnahme und Beratung sind im Labor in Norderstedt möglich, wenige Minuten von Hamburg entfernt.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sektion dunkel" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="container kontakt">
+    <div class="kontakt-info">
+      <span class="kicker">Kontakt</span>
+      <h2 id="h-kontakt">Das Team <span class="script">kennenlernen</span></h2>
+      <p>Sie möchten Holistic Smile Design kennenlernen? Schreiben Sie uns über das Formular oder rufen Sie an. Gern kommen wir auch zu Ihnen in die Praxis.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><a href="tel:+494094369370">040 94369370</a><small>Mo–Do 08:00–18:00 Uhr, Fr 08:00–15:00 Uhr</small></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><a href="mailto:info@holistic-smile-design.de">info@holistic-smile-design.de</a><small>Für Anfragen und Auftragsdaten</small></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div>Oststraße 120<br>22844 Norderstedt<small>Industriegebiet Norderstedt</small></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><div><a href="https://www.instagram.com/holistic_smile_design/" rel="noopener" target="_blank">@holistic_smile_design</a><small>Einblicke ins Labor auf Instagram</small></div></li>
+      </ul>
+    </div>
+    {formular()}
+  </div>
+</section>
+"""
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "AboutPage", "@id": DOMAIN + "team.html", "name": "Das Team von Holistic Smile Design", "url": DOMAIN + "team.html", "about": {"@id": DOMAIN + "#labor"}},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Startseite", "item": DOMAIN},
+            {"@type": "ListItem", "position": 2, "name": "Team", "item": DOMAIN + "team.html"}]}]}
+    extra = '<script type="application/ld+json">\n' + json.dumps(ld, ensure_ascii=False, indent=1) + '\n</script>'
+    seite = kopf('Team | Holistic Smile Design, Dentallabor Norderstedt', 'Das Team von Holistic Smile Design: Zahntechnikermeister Frank Köpp, M.Sc., und sein Team im digitalen Dentallabor in Norderstedt bei Hamburg.', 'team.html', extra=extra) + body + FUSS
+    open('team.html', 'w', encoding='utf-8').write(seite)
+    print('geschrieben team.html')
+
+teamseite()
+
 # Sitemap
-urls = [''] + [l['datei'] for l in LEISTUNGEN]
+urls = [''] + [l['datei'] for l in LEISTUNGEN] + ['team.html']
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for u in urls:
-    sm += f'  <url><loc>{DOMAIN}{u}</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>{"1.0" if u=="" else "0.8"}</priority></url>\n'
+    sm += f'  <url><loc>{DOMAIN}{u}</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>{"1.0" if u=="" else "0.8"}</priority></url>\n'
 open('sitemap.xml', 'w', encoding='utf-8').write(sm + '</urlset>\n')
 print('sitemap.xml aktualisiert')

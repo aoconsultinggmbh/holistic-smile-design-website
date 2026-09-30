@@ -42,7 +42,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:1.0625rem;line-height:1.65;color:var(--text);background:var(--weiss);font-weight:400}
 img{max-width:100%;height:auto;display:block}
 picture{display:block}
-.karte-breit picture,.labor-bilder picture,.technik picture,.hero-portrait picture{height:100%}
+.labor-bilder picture,.technik picture,.hero-portrait picture{height:100%}
 a{color:inherit}
 h1,h2,h3,h4{font-weight:400;line-height:1.15;margin:0 0 .5em;letter-spacing:.01em}
 h1{font-size:clamp(2.1rem,4.6vw,3.6rem);font-weight:300;letter-spacing:.02em}
@@ -174,15 +174,19 @@ p{margin:0 0 1em}
 .karte .tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;padding-top:.6rem}
 .karte .tags span{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:.25rem .7rem;color:#e6e2d8}
 .karte-breit{grid-column:span 2;flex-direction:row;align-items:center;gap:2rem}
-.karte-breit picture{flex:0 0 42%;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3}
-.karte-breit img{width:100%;height:100%;object-fit:cover}
-.karte-breit>div{flex:1;display:flex;flex-direction:column;gap:.8rem}
+.karte-breit picture{flex:0 0 42%;align-self:stretch;min-height:0;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3}
+.karte-breit img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}.karte-breit>div{flex:1;display:flex;flex-direction:column;gap:.8rem}
+/* Kernkompetenz: ganze Reihe, damit im 3er-Raster keine Lücke entsteht */
+.karte-kern{grid-column:1/-1}
+.karte-kern picture{flex:0 0 36%;aspect-ratio:16/10}
 .karte-cta{grid-column:span 2;background:linear-gradient(120deg,#d9b835 0%,var(--gold) 40%,var(--gold-dunkel) 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 16px 36px -16px rgba(192,158,18,.6);color:var(--schwarz);border:0;flex-direction:column;align-items:flex-start;justify-content:center;gap:1.4rem;padding:2.2rem 2rem}
 .karte-cta:hover{transform:none;background:linear-gradient(120deg,#e6c85f 0%,var(--gold-hell) 40%,var(--gold) 100%)}
 .karte-cta h3{color:var(--schwarz);font-weight:500;margin:0}
 .karte-cta p{color:#3a3105;margin:0}
-@media (max-width:1000px){.karten{grid-template-columns:repeat(2,minmax(0,1fr))}.karte-breit{grid-column:span 2}.karte-cta{grid-column:1/-1}}
-@media (max-width:640px){.karten{grid-template-columns:minmax(0,1fr)}.karte-breit,.karte-cta{grid-column:span 1;flex-direction:column;align-items:stretch}.karte-breit picture{flex:none;height:auto;width:100%;max-width:100%}}
+@media (max-width:1000px){.karten{grid-template-columns:repeat(2,minmax(0,1fr))}.karte-breit{grid-column:span 2}.karte-cta,.karte-voll{grid-column:1/-1}.karte-kern picture{flex-basis:42%;aspect-ratio:4/3}}
+/* Handy: die breite Karte wird zur Spalte. Das Bild darf hier keine Prozent-Höhe mehr haben,
+   sonst nimmt es die ganze Kartenhöhe ein und der Text läuft in die nächste Karte (Fehler 01/02, Kunde 29.09.). */
+@media (max-width:640px){.karten{grid-template-columns:minmax(0,1fr)}.karte-breit,.karte-cta,.karte-voll{grid-column:1/-1}.karte-breit{flex-direction:column;align-items:stretch}.karten .karte-breit picture{flex:none;align-self:auto;height:auto;width:100%;max-width:100%;aspect-ratio:4/3}.karten .karte-breit>div{flex:none}}
 
 /* Ablauf */
 .schritte{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.4rem;counter-reset:s}
@@ -213,7 +217,7 @@ p{margin:0 0 1em}
 .technik figure{margin:0;position:relative;border-radius:var(--radius-gross);overflow:hidden;aspect-ratio:4/3;background:var(--schwarz-2)}
 .technik img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .technik figure:hover img{transform:scale(1.05)}
-.technik picture,.karte-breit picture,.labor-bilder picture{height:100%}
+.technik picture,.labor-bilder picture{height:100%}
 .technik figcaption{position:absolute;left:0;right:0;bottom:0;padding:3.2rem 1.2rem 1.1rem;background:linear-gradient(to top,rgba(20,20,20,.97) 0%,rgba(20,20,20,.9) 45%,rgba(20,20,20,.55) 75%,rgba(20,20,20,0) 100%);color:#fff;font-size:.95rem;text-shadow:0 1px 3px rgba(0,0,0,.6)}
 .technik figcaption strong{display:block;color:var(--gold-hell);font-weight:500;letter-spacing:.04em;font-size:1.02rem;margin-bottom:.15rem}
 @media (max-width:820px){.technik{grid-template-columns:1fr 1fr}}
@@ -348,3 +352,36 @@ body>footer{background:var(--schwarz-3);color:#cfcabd;padding:3.5rem 0 2rem;font
 .logo img{display:block;height:58px;width:auto;max-width:none}
 .fuss .logo img{height:66px}
 @media (max-width:560px){.kopf .logo img{height:42px}}
+
+/* ---------- Instagram ---------- */
+.nav .insta{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.35);border-radius:50%;color:#fff;transition:background var(--uebergang),color var(--uebergang),border-color var(--uebergang),transform var(--uebergang)}
+.nav .insta svg{width:20px;height:20px}
+.nav .insta::after{display:none}
+.nav .insta:hover,.nav .insta:focus-visible{background:var(--gold);border-color:var(--gold);color:var(--schwarz);transform:translateY(-2px)}
+@media (max-width:1100px){.nav .insta{width:auto;height:auto;border-radius:var(--radius);border:1px solid rgba(255,255,255,.25);padding:.7rem .9rem;gap:.6rem;justify-content:flex-start;margin-top:.4rem}.nav .insta .insta-text{display:inline}.nav .insta:hover,.nav .insta:focus-visible{transform:none}}
+.insta-text{display:none}
+.btn-insta{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-insta:hover,.btn-insta:focus-visible{background:var(--gold);border-color:var(--gold);color:var(--schwarz);transform:translateY(-3px)}
+.btn-insta svg{width:20px;height:20px}
+.fuss .sozial{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.45rem 1rem .45rem .8rem;transition:background var(--uebergang),color var(--uebergang),border-color var(--uebergang)}
+.fuss .sozial svg{width:18px;height:18px}
+.fuss a.sozial:hover,.fuss a.sozial:focus-visible{background:var(--gold);border-color:var(--gold);color:var(--schwarz)}
+
+/* ---------- Team-Seite ---------- */
+.uhero-bild.breit picture{aspect-ratio:3/2}
+.team-raster{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.6rem}
+.person{background:var(--schwarz-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-gross);overflow:hidden;color:var(--text-hell);transition:transform var(--uebergang),border-color var(--uebergang)}
+.person:hover,.person:focus-within{transform:translateY(-4px);border-color:var(--gold)}
+.person picture{aspect-ratio:4/5;overflow:hidden;background:#333}
+.person img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform .6s ease}
+.person:hover img{transform:scale(1.03)}
+.person-text{padding:1.3rem 1.5rem 1.5rem}
+.person-text h2{font-size:1.5rem;margin:0 0 .2rem;color:#fff;font-weight:400}
+.person-text .rolle{display:block;color:var(--gold-hell);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;margin-bottom:.6rem}
+.person-text p{margin:0;color:#cfcabd;font-size:.98rem}
+.person-inhaber{grid-column:span 2;display:grid;grid-template-columns:.9fr 1.1fr}
+.person-inhaber picture{aspect-ratio:auto;height:100%;min-height:380px}
+.person-inhaber .person-text{padding:2rem;display:flex;flex-direction:column;justify-content:center}
+.person-inhaber .person-text h2{font-size:1.9rem}
+@media (max-width:1000px){.team-raster{grid-template-columns:repeat(2,minmax(0,1fr))}.person-inhaber{grid-column:1/-1}}
+@media (max-width:640px){.team-raster{grid-template-columns:minmax(0,1fr)}.person-inhaber{grid-template-columns:1fr}.person-inhaber picture{aspect-ratio:4/5;min-height:0}}
