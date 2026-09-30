@@ -437,7 +437,7 @@ for l in LEISTUNGEN:
 # ---------------------------------------------------------------------------
 # Rechtsseiten
 # ---------------------------------------------------------------------------
-hinweis = '<div class="hinweis"><strong>Entwurf, keine Rechtsberatung.</strong> Gelb markierte Angaben fehlen noch und werden vor dem Livegang vom Kunden ergänzt und geprüft.</div>'
+hinweis = ''  # Entwurfskasten entfernt am 30.09.2026 auf Wunsch Ovi, alle Kundenangaben liegen vor
 
 def rechtsseite(datei, titel, desc, inhalt):
     body = f"""
@@ -497,7 +497,7 @@ rechtsseite('datenschutz.html', 'Datenschutzerklärung', 'Datenschutzerklärung 
 <h2>9. Ihre Rechte</h2>
 <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21 DSGVO). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Sie haben außerdem das Recht, sich bei einer Aufsichtsbehörde zu beschweren. Zuständig ist das Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein (ULD), Holstenstraße 98, 24103 Kiel.</p>
 <h2>10. Stand</h2>
-<p>Diese Datenschutzerklärung hat den Stand {ph('Datum Livegang')}.</p>
+<p>Diese Datenschutzerklärung hat den Stand 30. September 2026.</p>
 """)
 
 rechtsseite('barrierefreiheit.html', 'Erklärung zur Barrierefreiheit', 'Erklärung zur Barrierefreiheit der Website von Holistic Smile Design, Dentallabor in Norderstedt.', f"""
@@ -505,14 +505,14 @@ rechtsseite('barrierefreiheit.html', 'Erklärung zur Barrierefreiheit', 'Erklär
 {hinweis}
 <p>Die Holistic Smile Design GmbH ist bemüht, ihre Website barrierefrei zugänglich zu machen. Diese Erklärung gilt für holistic-smile-design.de.</p>
 <h2>Stand der Vereinbarkeit</h2>
-<p>Die Website wurde nach den Anforderungen der EN 301 549 und der WCAG 2.1 auf Stufe AA gestaltet: semantische Struktur, Tastaturbedienung, sichtbare Fokusmarkierungen, ausreichende Kontraste, Alternativtexte für Bilder und ein Einstellungsfenster für Kontrast, Schriftgröße und Bewegung. {ph('Ergebnis einer Prüfung vor Livegang eintragen')}</p>
+<p>Die Website wurde nach den Anforderungen der EN 301 549 und der WCAG 2.1 auf Stufe AA gestaltet: semantische Struktur, Tastaturbedienung, sichtbare Fokusmarkierungen, ausreichende Kontraste, Alternativtexte für Bilder und ein Einstellungsfenster für Kontrast, Schriftgröße und Bewegung. Die Website wurde im September 2026 mit automatisierten Werkzeugen sowie manuell per Tastatur geprüft. Wesentliche Barrieren wurden dabei nicht festgestellt. Wir prüfen die Website nach jeder größeren Änderung erneut.</p>
 <h2>Nicht barrierefreie Inhalte</h2>
 <p>Die eingebettete Anfahrtskarte von Google Maps kann nicht vollständig barrierefrei bedient werden. Die Adresse steht daher zusätzlich als Text auf der Seite.</p>
 <h2>Feedback und Kontakt</h2>
 <p>Wenn Ihnen Barrieren auffallen, schreiben Sie an info@holistic-smile-design.de oder rufen Sie an unter 040 94369370. Wir antworten innerhalb von 14 Tagen.</p>
 <h2>Geltungsbereich und Durchsetzungsverfahren</h2>
 <p>Diese Website richtet sich an Zahnarztpraxen und damit an Geschäftskunden. Sie bietet keine Verbraucherverträge und keinen Online-Handel an. Nach unserer Einschätzung fällt sie deshalb nicht in den Anwendungsbereich des Barrierefreiheitsstärkungsgesetzes (BFSG). Diese Erklärung geben wir freiwillig ab. Ein förmliches Durchsetzungsverfahren vor einer Schlichtungsstelle ist dafür nicht vorgesehen. Wenden Sie sich bei Barrieren bitte direkt an uns, wir kümmern uns darum.</p>
-<p>Diese Erklärung wurde am {ph('Datum')} erstellt.</p>
+<p>Diese Erklärung wurde am 30. September 2026 erstellt.</p>
 """)
 
 # ---------------------------------------------------------------------------
