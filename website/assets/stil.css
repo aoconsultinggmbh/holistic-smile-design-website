@@ -244,8 +244,9 @@ p{margin:0 0 1em}
 .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.15rem 0;font-weight:500;font-size:1.1rem;transition:color var(--uebergang)}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary h3{font:inherit;color:inherit;letter-spacing:inherit;margin:0;display:inline}
-.faq summary::after{content:"+";flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-weight:300;font-size:1.4rem;transition:transform var(--uebergang),background var(--uebergang),color var(--uebergang)}
-.faq details[open] summary::after{transform:rotate(45deg);background:var(--gold);color:var(--schwarz)}
+/* Plus als zwei gezeichnete Linien statt Textzeichen, damit es exakt mittig im Kreis sitzt */
+.faq summary::after{content:"";flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);background:linear-gradient(var(--gold),var(--gold)) center/12px 1.5px no-repeat,linear-gradient(var(--gold),var(--gold)) center/1.5px 12px no-repeat;transition:transform var(--uebergang),background-color var(--uebergang)}
+.faq details[open] summary::after{transform:rotate(45deg);background:linear-gradient(var(--schwarz),var(--schwarz)) center/12px 1.5px no-repeat,linear-gradient(var(--schwarz),var(--schwarz)) center/1.5px 12px no-repeat,var(--gold)}
 .faq summary:hover,.faq summary:focus-visible{color:var(--gold-dunkel)}
 .faq details p{margin:0 0 1.3rem;color:#3d3d3d;max-width:760px}
 
