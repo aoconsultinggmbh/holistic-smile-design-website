@@ -268,9 +268,9 @@ def kopf(title, desc, canonical, robots='index,follow', extra=''):
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:url" content="{DOMAIN}{canonical}">
 <meta name="theme-color" content="#242424">
-<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="icon" href="img/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png?v=2" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2">
 <link rel="preload" href="fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/einwilligung.css?v=1">
