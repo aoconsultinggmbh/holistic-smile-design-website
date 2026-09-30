@@ -77,10 +77,13 @@ Aus `doku/projektstand.md`. Die Punkte 1 bis 5 blockieren den Livegang.
 - [ ] **Das Kontaktformular verschickt nichts.** Es prüft die Pflichtfelder und
       zeigt eine Danke-Ansicht, mehr nicht. Die Stelle für den Versand ist im
       Code mit `HIER beim Livegang` markiert. Vorher fällt jede Anfrage ins Leere.
-- [ ] **Rechtsseiten vom Kunden prüfen lassen**, die gelb markierten Lücken
-      füllen: USt-IdNr., zuständige Handwerkskammer, Innung.
-- [ ] **Hoster in der Datenschutzerklärung** eintragen und Speicherdauer der
-      Logs, sobald der Server feststeht.
+- [x] Rechtsseiten: USt-IdNr. DE360767272, Handwerkskammer Lübeck, keine Innung
+      (Kunde am 30.09.2026). Offen: Datum Livegang in Datenschutz und Barrierefreiheit,
+      Prüfergebnis Barrierefreiheit.
+- [x] Hoster All-Inkl steht in der Datenschutzerklärung (ohne feste Tagesfrist für
+      Logs, wie bei kiefer-website). Ziffer 6 beschreibt den PHP-Versand ohne Speicherung:
+      **das Skript muss beim Livegang genau so gebaut werden** (Honigtopf, Zeitsperre,
+      keine Ablage), sonst stimmt der Text nicht.
 - [ ] **Bildrechte:** Verträge für die Mitarbeiterfotos einholen,
       Bildnachweis Filmox Media laut Vertrag prüfen.
 - [ ] **Lizenz der Schrift Amsterdam Four** für die Webnutzung prüfen.

@@ -460,9 +460,9 @@ rechtsseite('impressum.html', 'Impressum', 'Impressum der Holistic Smile Design 
 <h2>Registereintrag</h2>
 <p>Eintragung im Handelsregister<br>Registergericht: Amtsgericht Kiel<br>Registernummer: HRB 25615 KI</p>
 <h2>Umsatzsteuer-ID</h2>
-<p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: {ph('USt-IdNr.')}</p>
+<p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE360767272</p>
 <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-<p>Berufsbezeichnung: Zahntechnikermeister (verliehen in Deutschland)<br>Zuständige Handwerkskammer: {ph('Handwerkskammer, z. B. Handwerkskammer Lübeck')}<br>Zahntechniker-Innung: {ph('Innung, falls Mitglied')}</p>
+<p>Berufsbezeichnung: Zahntechnikermeister (verliehen in Deutschland)<br>Zuständige Handwerkskammer: Handwerkskammer Lübeck, Breite Straße 10–12, 23552 Lübeck, <a href="https://www.hwk-luebeck.de" rel="noopener">www.hwk-luebeck.de</a></p>
 <p>Es gelten die Handwerksordnung (HwO) sowie das Medizinprodukterecht-Durchführungsgesetz (MPDG) und die Verordnung (EU) 2017/745 über Medizinprodukte. Zahnersatz wird als Sonderanfertigung im Sinne dieser Verordnung hergestellt.</p>
 <h2>Streitschlichtung</h2>
 <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" rel="noopener">https://ec.europa.eu/consumers/odr/</a>. Holistic Smile Design ist nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
@@ -479,7 +479,7 @@ rechtsseite('datenschutz.html', 'Datenschutzerklärung', 'Datenschutzerklärung 
 <p>Holistic Smile Design GmbH, Oststraße 120, 22844 Norderstedt, Telefon 040 94369370, E-Mail info@holistic-smile-design.de. Vertreten durch den Geschäftsführer Frank Köpp.</p>
 <p>Ein Datenschutzbeauftragter ist nicht bestellt.</p>
 <h2>2. Hosting</h2>
-<p>Diese Website wird bei {ph('Hoster, Firmierung und Anschrift, z. B. ALL-INKL.COM')} gehostet. Beim Aufruf der Website verarbeitet der Hoster in unserem Auftrag technische Zugriffsdaten (IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browsertyp, Referrer) in Server-Logdateien. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und stabilen Betrieb der Website (Art. 6 Abs. 1 lit. f DSGVO). Die Logdateien werden nach {ph('Speicherdauer laut Hoster, z. B. 7 Tagen')} gelöscht. Mit dem Hoster besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.</p>
+<p>Diese Website wird bei der ALL-INKL.COM – Neue Medien Münnich, Inhaber René Münnich, Hauptstraße 68, 02742 Friedersdorf, auf Servern in Deutschland gehostet. Beim Aufruf der Website verarbeitet der Hoster in unserem Auftrag technisch notwendige Verbindungsdaten (IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browsertyp, verweisende Seite) in Server-Logdateien. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und störungsfreien Betrieb der Website (Art. 6 Abs. 1 lit. f DSGVO). Die Logdateien werden nur so lange gespeichert, wie es für den sicheren Betrieb und die Abwehr von Angriffen erforderlich ist, und danach gelöscht. Mit dem Hoster besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.</p>
 <h2>3. Schriften und Bilder</h2>
 <p>Alle Schriften sind lokal auf unserem Server gespeichert. Beim Aufruf der Website wird keine Verbindung zu Google Fonts oder anderen Schriftanbietern aufgebaut.</p>
 <h2>4. Einwilligung und lokaler Speicher</h2>
@@ -488,7 +488,8 @@ rechtsseite('datenschutz.html', 'Datenschutzerklärung', 'Datenschutzerklärung 
 <p>Die Anfahrtskarte wird erst geladen, wenn Sie im Einwilligungsfenster oder durch Klick auf „Karte laden" zugestimmt haben (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Beim Laden werden Ihre IP-Adresse und Browserdaten an Google übertragen, auch in die USA. Google ist nach dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" rel="noopener">https://policies.google.com/privacy</a>.</p>
 <h2>6. Kontaktformular, E-Mail und Telefon</h2>
 <p>Wenn Sie uns über das Kontaktformular, per E-Mail oder telefonisch kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Daten (Praxisname, Name, Telefonnummer, E-Mail-Adresse, Interessen, Nachricht) zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf eine Zusammenarbeit zielt, sonst Art. 6 Abs. 1 lit. f DSGVO. Die Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
-<p>Das Formular wird über {ph('Versandweg, z. B. PHP-Skript des Hosters oder Formulardienst mit Anbieter')} verschickt.</p>
+<p>So läuft der Versand ab: Ihre Angaben werden verschlüsselt an unseren Webserver übertragen und von dort als E-Mail an uns weitergeleitet. Auf dem Server werden sie nicht gespeichert, es gibt keine Datenbank und keinen Formulardienst eines Drittanbieters. Zum Schutz vor automatisierten Nachrichten enthält das Formular ein für Sie unsichtbares Feld und prüft, wie viel Zeit zwischen Aufruf und Absenden vergangen ist. Dabei werden keine personenbezogenen Daten ausgewertet und keine Cookies gesetzt.</p>
+<p>Bitte senden Sie uns über das Formular keine Patientendaten und keine Gesundheitsdaten. Für alles, was einen konkreten Fall betrifft, nutzen Sie bitte den üblichen Weg über Ihre Praxis-Software oder das Telefon.</p>
 <h2>7. Links zu Google und Instagram</h2>
 <p>Die Website verlinkt auf unser Unternehmensprofil bei Google und auf unser Profil bei Instagram (Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland). Es handelt sich um einfache Links, nicht um Einbettungen: Beim Aufruf unserer Website werden keine Daten an Google oder Meta übertragen. Erst mit dem Klick auf einen Link verlassen Sie unsere Website, dann gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
 <h2>8. Empfänger und Auftragsverarbeiter</h2>
@@ -508,9 +509,9 @@ rechtsseite('barrierefreiheit.html', 'Erklärung zur Barrierefreiheit', 'Erklär
 <h2>Nicht barrierefreie Inhalte</h2>
 <p>Die eingebettete Anfahrtskarte von Google Maps kann nicht vollständig barrierefrei bedient werden. Die Adresse steht daher zusätzlich als Text auf der Seite.</p>
 <h2>Feedback und Kontakt</h2>
-<p>Wenn Ihnen Barrieren auffallen, schreiben Sie an info@holistic-smile-design.de oder rufen Sie an unter 040 94369370. Wir antworten innerhalb von {ph('Frist, z. B. 14 Tagen')}.</p>
-<h2>Durchsetzungsverfahren</h2>
-<p>{ph('Zuständige Schlichtungsstelle oder Marktüberwachungsbehörde nach BFSG eintragen, falls die Website in den Anwendungsbereich fällt')}</p>
+<p>Wenn Ihnen Barrieren auffallen, schreiben Sie an info@holistic-smile-design.de oder rufen Sie an unter 040 94369370. Wir antworten innerhalb von 14 Tagen.</p>
+<h2>Geltungsbereich und Durchsetzungsverfahren</h2>
+<p>Diese Website richtet sich an Zahnarztpraxen und damit an Geschäftskunden. Sie bietet keine Verbraucherverträge und keinen Online-Handel an. Nach unserer Einschätzung fällt sie deshalb nicht in den Anwendungsbereich des Barrierefreiheitsstärkungsgesetzes (BFSG). Diese Erklärung geben wir freiwillig ab. Ein förmliches Durchsetzungsverfahren vor einer Schlichtungsstelle ist dafür nicht vorgesehen. Wenden Sie sich bei Barrieren bitte direkt an uns, wir kümmern uns darum.</p>
 <p>Diese Erklärung wurde am {ph('Datum')} erstellt.</p>
 """)
 
