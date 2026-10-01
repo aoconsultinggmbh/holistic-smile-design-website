@@ -555,7 +555,7 @@ rechtsseite('barrierefreiheit.html', 'Erklärung zur Barrierefreiheit', 'Erklär
 # Beschreibungen (weißes Hemd = Majed, schwarzes T-Shirt = Sebastian, florales Oberteil = Johanna).
 # ---------------------------------------------------------------------------
 TEAM = [
-  dict(bild='team-frank-koepp-zahntechnikermeister-dentallabor-norderstedt', name='Frank', rolle='Inhaber, Zahntechnikermeister, M.Sc.',
+  dict(bild='team-frank-koepp-inhaber-dentallabor-norderstedt', name='Frank', rolle='Inhaber, Zahntechnikermeister, M.Sc.',
        text='Zahntechnikermeister und Master of Science in Digitaler Dentaltechnologie. Frank hat Holistic Smile Design 2023 gegründet und plant komplexe Sanierungen mit Backward Planning, von der ersten Visualisierung bis zur Eingliederung.',
        alt='Frank Köpp, Inhaber und Zahntechnikermeister von Holistic Smile Design in Norderstedt', inhaber=True),
   dict(bild='team-nina-zahntechnikermeisterin-dentallabor-norderstedt', name='Nina', rolle='Zahntechnikermeisterin',
@@ -564,7 +564,7 @@ TEAM = [
   dict(bild='team-nadine-zahntechnikerin-dentallabor-norderstedt', name='Nadine', rolle='Zahntechnikerin',
        text='Ich liebe meinen Beruf und meine Leidenschaft für Ästhetik. Für mich steht Ästhetik an erster Stelle, mit einem hohen Anspruch an Präzision, Qualität und Harmonie. Jedes Detail zählt, denn wahre Ästhetik entsteht dort, wo Perfektion auf Individualität trifft.',
        alt='Nadine, Zahntechnikerin bei Holistic Smile Design in Norderstedt'),
-  dict(bild='team-zahntechnikerin-2-dentallabor-norderstedt', name='Johanna', rolle='Zahntechnikerin',
+  dict(bild='team-johanna-zahntechnikerin-dentallabor-norderstedt', name='Johanna', rolle='Zahntechnikerin',
        text='Ich liebe die Kombination aus Präzision, Kreativität und moderner Technik. Besonders spannend finde ich es, aus digitalen Daten und hochwertigen Materialien individuelle Arbeiten herzustellen.',
        alt='Johanna, Zahntechnikerin bei Holistic Smile Design in Norderstedt'),
   dict(bild='team-zahntechniker-1-dentallabor-norderstedt', name='Majed', rolle='Zahntechniker',
