@@ -58,9 +58,26 @@
   window.addEventListener('load',pruefeKarte);
   }
 
-  /* Formular: Entwurf, verschickt nichts */
+  /* Formular: Versand ueber anfrage-senden.php (PHP beim Hoster).
+     Klappt der Versand nicht (z. B. auf der Vorschau ohne PHP), oeffnet sich das
+     Mailprogramm mit der fertigen Anfrage. So geht keine Anfrage verloren.
+     Pflichtfelder werden dreifach geprueft: im Browser, hier und im PHP-Skript. */
   var form=document.getElementById('formular');
   if(form){
+  var ZIEL='info@holistic-smile-design.de';
+  var zeit=form.querySelector('input[name="zeit"]'); if(zeit)zeit.value=String(Math.floor(Date.now()/1000));
+  var knopf=form.querySelector('button[type="submit"]');
+  function wert(n){var e=form.querySelector('[name="'+n+'"]');return e?e.value.trim():'';}
+  function danke(ersatz){
+    var p=form.querySelector('.danke .ersatzweg'); if(p)p.hidden=!ersatz;
+    form.setAttribute('data-gesendet','true');
+    var h=form.querySelector('.danke h3'); h.setAttribute('tabindex','-1'); h.focus();
+  }
+  function perMail(){
+    var interessen=[].map.call(form.querySelectorAll('input[name="interesse[]"]:checked'),function(c){return c.value;}).join(', ');
+    var text='Praxis: '+wert('praxis')+'\nAnsprechpartner: '+wert('name')+'\nTelefon: '+wert('telefon')+'\nE-Mail: '+wert('email')+'\nInteresse an: '+(interessen||'-')+'\n\n'+wert('nachricht');
+    window.setTimeout(function(){location.href='mailto:'+ZIEL+'?subject='+encodeURIComponent('Anfrage über die Webseite: '+wert('praxis'))+'&body='+encodeURIComponent(text);},400);
+  }
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var ok=true, erstes=null;
@@ -71,10 +88,13 @@
       if(!gueltig){ok=false; if(!erstes)erstes=inp;}
     });
     if(!ok){erstes.focus();return;}
-    /* HIER beim Livegang: Daten per fetch() an den Server schicken und erst bei Erfolg die Danke-Ansicht zeigen. */
-    form.setAttribute('data-gesendet','true');
-    form.querySelector('.danke h3').setAttribute('tabindex','-1');
-    form.querySelector('.danke h3').focus();
+    if(knopf)knopf.disabled=true;
+    var fertig=function(){if(knopf)knopf.disabled=false;};
+    if(!window.fetch||!window.FormData){fertig();danke(true);perMail();return;}
+    fetch(form.getAttribute('action'),{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){return r.json();})
+      .then(function(a){fertig(); if(a&&a.ok){danke(false);} else {throw new Error('Versand');}})
+      ['catch'](function(){fertig();danke(true);perMail();});
   });
   form.querySelectorAll('input,textarea').forEach(function(inp){inp.addEventListener('input',function(){var f=inp.closest('.feld');if(f)f.setAttribute('data-fehler','false');});});
   }

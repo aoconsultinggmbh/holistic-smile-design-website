@@ -191,10 +191,7 @@ window.AO_EINWILLIGUNG = {
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><div><a href="https://www.instagram.com/holistic_smile_design/" rel="noopener" target="_blank">@holistic_smile_design</a><small>Einblicke ins Labor auf Instagram</small></div></li>
       </ul>
     </div>
-    <form class="formular" id="formular" novalidate data-gesendet="false" aria-labelledby="h-formular">
-      <!-- ENTWURF: Das Formular verschickt nichts. Beim Livegang hier den Versand anbinden
-           (z. B. PHP-Mailer beim Hoster oder Formular-Dienst) und die Danke-Ansicht nach
-           erfolgreicher Antwort des Servers setzen. -->
+    <form class="formular" id="formular" action="anfrage-senden.php" method="post" novalidate data-gesendet="false" aria-labelledby="h-formular">
       <div class="formular-felder">
         <h3 id="h-formular" style="margin-bottom:1.2rem">Anfrage für Zahnarztpraxen</h3>
         <div class="reihe">
@@ -208,12 +205,12 @@ window.AO_EINWILLIGUNG = {
         <fieldset>
           <legend>Interesse an</legend>
           <div class="chips">
-            <label><input type="checkbox" name="interesse" value="Backward Planning"><span>Backward Planning</span></label>
-            <label><input type="checkbox" name="interesse" value="Teleskoparbeiten"><span>Teleskoparbeiten</span></label>
-            <label><input type="checkbox" name="interesse" value="All-on-4 / All-on-6"><span>All-on-4 / All-on-6</span></label>
-            <label><input type="checkbox" name="interesse" value="Implantatschablonen"><span>Implantatschablonen</span></label>
-            <label><input type="checkbox" name="interesse" value="Vollkeramik"><span>Vollkeramik</span></label>
-            <label><input type="checkbox" name="interesse" value="Kennenlerntermin"><span>Kennenlerntermin</span></label>
+            <label><input type="checkbox" name="interesse[]" value="Backward Planning"><span>Backward Planning</span></label>
+            <label><input type="checkbox" name="interesse[]" value="Teleskoparbeiten"><span>Teleskoparbeiten</span></label>
+            <label><input type="checkbox" name="interesse[]" value="All-on-4 / All-on-6"><span>All-on-4 / All-on-6</span></label>
+            <label><input type="checkbox" name="interesse[]" value="Implantatschablonen"><span>Implantatschablonen</span></label>
+            <label><input type="checkbox" name="interesse[]" value="Vollkeramik"><span>Vollkeramik</span></label>
+            <label><input type="checkbox" name="interesse[]" value="Kennenlerntermin"><span>Kennenlerntermin</span></label>
           </div>
         </fieldset>
         <div class="feld"><label for="f-nachricht">Nachricht</label><textarea id="f-nachricht" name="nachricht"></textarea></div>
@@ -221,6 +218,8 @@ window.AO_EINWILLIGUNG = {
           <label style="display:flex;gap:.8rem;align-items:flex-start;font-weight:400"><input id="f-ds" type="checkbox" name="datenschutz" required><span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage einverstanden. *</span></label>
           <span class="fehler">Bitte der Datenschutzerklärung zustimmen.</span>
         </div>
+        <div class="hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="f-website">Dieses Feld bitte leer lassen</label><input id="f-website" type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <input type="hidden" name="zeit" value="">
         <button class="btn btn-gold" type="submit" style="width:100%">Anfrage senden
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         <p style="font-size:.82rem;color:#6b6b6b;margin:.9rem 0 0">* Pflichtfelder</p>
@@ -228,6 +227,7 @@ window.AO_EINWILLIGUNG = {
       <div class="danke" role="status" aria-live="polite">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
         <h3>Vielen Dank für Ihre Anfrage.</h3>
+        <p class="ersatzweg" hidden><strong>Der Versand über die Webseite hat gerade nicht geklappt.</strong> Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage, bitte dort noch auf Senden klicken.</p>
         <p>Wir melden uns so schnell wie möglich bei Ihnen. Bei dringenden Fragen erreichen Sie uns unter <a href="tel:+494094369370" style="color:var(--gold-dunkel)">040 94369370</a>.</p>
       </div>
     </form>
@@ -283,6 +283,7 @@ window.AO_EINWILLIGUNG = {
 </footer>
 <script src="assets/einwilligung.js?v=1" defer></script>
 <script src="assets/barrierefreiheit.js?v=1" defer></script>
-<script src="assets/skript.js?v=1" defer></script>
+<script src="assets/skript.js?v=2" defer></script>
+<script src="assets/statistik.js?v=1" defer></script>
 </body>
 </html>

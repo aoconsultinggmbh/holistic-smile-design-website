@@ -290,7 +290,8 @@ FUSS = f"""</main>
 {footer}
 <script src="assets/einwilligung.js?v=1" defer></script>
 <script src="assets/barrierefreiheit.js?v=1" defer></script>
-<script src="assets/skript.js?v=1" defer></script>
+<script src="assets/skript.js?v=2" defer></script>
+<script src="assets/statistik.js?v=1" defer></script>
 </body>
 </html>
 """
@@ -486,18 +487,24 @@ rechtsseite('datenschutz.html', 'Datenschutzerklärung', 'Datenschutzerklärung 
 <p>Beim ersten Besuch fragen wir Sie, ob die Anfahrtskarte von Google Maps geladen werden darf. Ihre Entscheidung speichern wir im lokalen Speicher Ihres Browsers (localStorage) unter dem Schlüssel „ao-einwilligung-v1", ohne Cookie und ohne Kennung. Gespeichert werden nur die gewählten Kategorien und der Zeitpunkt. Die Speicherung ist erforderlich, um Ihre Entscheidung nachzuweisen und Sie nicht bei jedem Aufruf erneut zu fragen (§ 25 Abs. 2 Nr. 2 TDDDG). Die Entscheidung gilt 12 Monate. Über „Cookie-Einstellungen" in der Fußzeile können Sie sie jederzeit ändern oder widerrufen.</p>
 <h2>5. Anfahrtskarte von Google Maps</h2>
 <p>Die Anfahrtskarte wird erst geladen, wenn Sie im Einwilligungsfenster oder durch Klick auf „Karte laden" zugestimmt haben (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Beim Laden werden Ihre IP-Adresse und Browserdaten an Google übertragen, auch in die USA. Google ist nach dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" rel="noopener">https://policies.google.com/privacy</a>.</p>
-<h2>6. Kontaktformular, E-Mail und Telefon</h2>
+<h2>6. Reichweitenmessung mit Matomo (ohne Cookies)</h2>
+<p>Um zu verstehen, welche Inhalte gefragt sind, zählen wir Seitenaufrufe mit Matomo. Matomo läuft auf einem eigenen Server in Deutschland, betrieben von der AO Consulting GmbH, Zeiloch 13, 76646 Bruchsal, in unserem Auftrag. Der Server steht bei der ALL-INKL.COM – Neue Medien Münnich (siehe Ziffer 2). Es werden keine Daten an Google, Meta oder andere Anbieter übermittelt und keine Daten in Drittländer übertragen.</p>
+<p>Dabei werden keine Cookies gesetzt und nichts im Speicher Ihres Browsers abgelegt oder ausgelesen. Ihre IP-Adresse wird um zwei Bytes gekürzt, bevor sie gespeichert wird, und ist danach keiner Person mehr zuzuordnen. Gespeichert werden die aufgerufene Seite, Datum und Uhrzeit, die verweisende Seite, ungefähre Region, Gerätetyp, Bildschirmgröße, Browser und Sprache.</p>
+<p>Weil nichts auf Ihrem Gerät gespeichert oder ausgelesen wird, ist hierfür keine Einwilligung erforderlich (§ 25 Abs. 2 TDDDG). Rechtsgrundlage ist unser berechtigtes Interesse an einer bedarfsgerechten Gestaltung dieser Website (Art. 6 Abs. 1 lit. f DSGVO).</p>
+<p>Widerspruch: Wenn Sie in Ihrem Browser die Einstellung „Do Not Track" aktivieren, werden Sie nicht gezählt. Wir werten diese Einstellung aus und halten uns daran. Sie können der Messung außerdem jederzeit per E-Mail an info@holistic-smile-design.de widersprechen.</p>
+<p>Die erhobenen Daten werden nach zwölf Monaten gelöscht.</p>
+<h2>7. Kontaktformular, E-Mail und Telefon</h2>
 <p>Wenn Sie uns über das Kontaktformular, per E-Mail oder telefonisch kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Daten (Praxisname, Name, Telefonnummer, E-Mail-Adresse, Interessen, Nachricht) zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf eine Zusammenarbeit zielt, sonst Art. 6 Abs. 1 lit. f DSGVO. Die Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
 <p>So läuft der Versand ab: Ihre Angaben werden verschlüsselt an unseren Webserver übertragen und von dort als E-Mail an uns weitergeleitet. Auf dem Server werden sie nicht gespeichert, es gibt keine Datenbank und keinen Formulardienst eines Drittanbieters. Zum Schutz vor automatisierten Nachrichten enthält das Formular ein für Sie unsichtbares Feld und prüft, wie viel Zeit zwischen Aufruf und Absenden vergangen ist. Dabei werden keine personenbezogenen Daten ausgewertet und keine Cookies gesetzt.</p>
 <p>Bitte senden Sie uns über das Formular keine Patientendaten und keine Gesundheitsdaten. Für alles, was einen konkreten Fall betrifft, nutzen Sie bitte den üblichen Weg über Ihre Praxis-Software oder das Telefon.</p>
-<h2>7. Links zu Google und Instagram</h2>
+<h2>8. Links zu Google und Instagram</h2>
 <p>Die Website verlinkt auf unser Unternehmensprofil bei Google und auf unser Profil bei Instagram (Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland). Es handelt sich um einfache Links, nicht um Einbettungen: Beim Aufruf unserer Website werden keine Daten an Google oder Meta übertragen. Erst mit dem Klick auf einen Link verlassen Sie unsere Website, dann gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
-<h2>8. Empfänger und Auftragsverarbeiter</h2>
-<p>Hoster (siehe Ziffer 2), Google (nur nach Einwilligung, Ziffer 5, oder nach Klick auf einen Link, Ziffer 7), Meta (nur nach Klick auf den Instagram-Link, Ziffer 7). Eine Übermittlung an weitere Dritte findet nicht statt.</p>
-<h2>9. Ihre Rechte</h2>
+<h2>9. Empfänger und Auftragsverarbeiter</h2>
+<p>Hoster (siehe Ziffer 2), AO Consulting GmbH als Betreiber der Reichweitenmessung (Ziffer 6), Google (nur nach Einwilligung, Ziffer 5, oder nach Klick auf einen Link, Ziffer 8), Meta (nur nach Klick auf den Instagram-Link, Ziffer 8). Eine Übermittlung an weitere Dritte findet nicht statt.</p>
+<h2>10. Ihre Rechte</h2>
 <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21 DSGVO). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Sie haben außerdem das Recht, sich bei einer Aufsichtsbehörde zu beschweren. Zuständig ist das Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein (ULD), Holstenstraße 98, 24103 Kiel.</p>
-<h2>10. Stand</h2>
-<p>Diese Datenschutzerklärung hat den Stand 30. September 2026.</p>
+<h2>11. Stand</h2>
+<p>Diese Datenschutzerklärung hat den Stand 1. Oktober 2026.</p>
 """)
 
 rechtsseite('barrierefreiheit.html', 'Erklärung zur Barrierefreiheit', 'Erklärung zur Barrierefreiheit der Website von Holistic Smile Design, Dentallabor in Norderstedt.', f"""
