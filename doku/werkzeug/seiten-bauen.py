@@ -55,10 +55,10 @@ LEISTUNGEN = [
     ],
     technik_h2='Fotostudio, Gesichtsscanner und KI-Werkzeuge im eigenen Haus',
     technik=('Backward Planning funktioniert nur mit guten Daten. Holistic Smile Design arbeitet deshalb mit einem eigenen Fotostudio für standardisierte Aufnahmen, einem Gesichtsscanner und KI-gestützten Planungswerkzeugen wie Smilecloud. Fotos, Scan und DVT werden zu einem Datensatz zusammengeführt, aus dem Vorschau, Provisorium und definitive Versorgung entstehen.', 'Frank Köpp ist Zahntechnikermeister und Master of Science (M.Sc.) in Digitaler Dentaltechnologie. Die komplexe Sanierung mit Backward Planning ist die Kernkompetenz seines Labors.'),
-    technik_bild='cad-planung-implantatprothetik-bildschirm-norderstedt',
-    technik_alt='Digitale Planung einer Versorgung am Bildschirm im Dentallabor Norderstedt',
-    bild2='zahnfarbe-bestimmen-vita-farbring-dentallabor-norderstedt',
-    bild2_alt='Zahnfarbbestimmung mit Farbring als Teil der Planung im Labor',
+    technik_bild='gesichtsscanner-backward-planning-dentallabor-norderstedt',
+    technik_alt='Gesichtsscan im Dentallabor Holistic Smile Design in Norderstedt als Grundlage für das Backward Planning',
+    bild2='gesichtsscan-ergebnis-backward-planning-dentallabor-norderstedt',
+    bild2_alt='Ergebnis des Gesichtsscans: dreidimensionales Modell des Gesichts für die Planung',
     faq=[
       ('Welches Dentallabor bei Hamburg plant komplexe Sanierungen mit Backward Planning?', 'Holistic Smile Design in der Oststraße 120, 22844 Norderstedt, hat die komplexe Sanierung mit Backward Planning als Kernkompetenz. Das Labor arbeitet mit Zahnarztpraxen in Norderstedt, Hamburg und ganz Deutschland zusammen und ist montags bis donnerstags von 8 bis 18 Uhr und freitags von 8 bis 15 Uhr unter 040 94369370 erreichbar.'),
       ('Was ist Backward Planning in der Zahntechnik?', 'Backward Planning bedeutet, eine Versorgung vom gewünschten Endergebnis her zu planen. Zuerst werden Ästhetik, Funktion und Bisslage festgelegt, dann wird rückwärts abgeleitet, welche Schritte, Provisorien und Hilfsmittel nötig sind. So passen alle Zwischenschritte zum Ziel, statt dass das Ergebnis am Ende dem Zufall überlassen bleibt.'),
@@ -95,6 +95,9 @@ LEISTUNGEN = [
     technik_alt='Zahntechniker prüft eine Teleskoparbeit unter der Lupe',
     bild2='artikulator-implantatmodell-dentallabor-norderstedt',
     bild2_alt='Zahntechnikermeister kontrolliert ein Modell im Artikulator im Labor in Norderstedt',
+    galerie=[('teleskoparbeit-dentallabor-norderstedt-1', 'Teleskoparbeit aus dem Dentallabor Holistic Smile Design, Ansicht der Innenseite mit Teleskopen'),
+             ('teleskoparbeit-dentallabor-norderstedt-2', 'Fertige Teleskoparbeit aus dem Dentallabor Holistic Smile Design in Norderstedt'),
+             ('teleskoparbeit-dentallabor-norderstedt-3', 'Teleskoparbeit von Holistic Smile Design in der Seitenansicht')],
     faq=[
       ('Welches Dentallabor in Norderstedt fertigt Teleskoparbeiten für Zahnärzte?', 'Holistic Smile Design in der Oststraße 120, 22844 Norderstedt, ist ein Meisterlabor mit Schwerpunkt Teleskoparbeiten. Das Labor beliefert Zahnarztpraxen in Norderstedt, Hamburg und ganz Deutschland. Erreichbar montags bis donnerstags von 8 bis 18 Uhr und freitags von 8 bis 15 Uhr unter 040 94369370.'),
       ('Was ist eine Teleskopprothese?', 'Eine Teleskopprothese ist herausnehmbarer Zahnersatz, der über Doppelkronen auf den Pfeilerzähnen hält. Die Primärkrone sitzt fest auf dem Zahn, die Sekundärkrone in der Prothese gleitet darüber und erzeugt durch Friktion den Halt. Klammern sind nicht sichtbar, die Prothese lässt sich zur Reinigung herausnehmen.'),
@@ -126,11 +129,14 @@ LEISTUNGEN = [
       ('Definitive Versorgung', 'Nach der Einheilphase folgen Abformung oder Scan auf Implantatniveau, Gerüst, Einprobe und die Fertigstellung der definitiven Brücke.'),
     ],
     technik_h2='Planung, Schablone und Prothetik aus einem Datensatz',
-    technik=('Bei All-on-4 und All-on-6 entscheidet die Planung über das Ergebnis. Holistic Smile Design führt DVT, Intraoralscan und Fotodokumentation in der CAD-Software zusammen und plant Implantatpositionen von der Prothetik her. So liegen Schraubenkanäle dort, wo sie ästhetisch und funktionell sinnvoll sind.', 'Schablonen und Provisorien werden im eigenen 3D-Drucker gefertigt, Gerüste und definitive Versorgungen auf der CAD/CAM-Fräsmaschine im Haus. Die Individualisierung übernimmt das Team von Hand.'),
+    technik=('Bei All-on-4 und All-on-6 entscheidet die Planung über das Ergebnis. Holistic Smile Design führt DVT, Intraoralscan und Fotodokumentation in der CAD-Software zusammen und plant Implantatpositionen von der Prothetik her. So liegen Schraubenkanäle dort, wo sie ästhetisch und funktionell sinnvoll sind.', 'Schablonen und Provisorien werden im eigenen 3D-Drucker gefertigt, Gerüste und definitive Versorgungen auf den CAD/CAM-Fräsmaschinen im Haus. Die Individualisierung übernimmt das Team von Hand.'),
     technik_bild='implantatversorgung-artikulator-kontrolle-norderstedt',
     technik_alt='Kontrolle einer Implantatversorgung im Artikulator',
     bild2='3d-drucker-implantatschablonen-dentallabor-norderstedt',
     bild2_alt='3D-Drucker für Schablonen und Provisorien im Dentallabor Norderstedt',
+    galerie=[('all-on-x-implantatbruecke-dentallabor-norderstedt-1', 'Implantatgetragene Brücke nach dem All-on-X-Konzept aus dem Dentallabor Holistic Smile Design'),
+             ('all-on-x-implantatbruecke-dentallabor-norderstedt-2', 'All-on-X-Brücke von unten mit Gerüst und Schraubkanälen'),
+             ('all-on-x-implantatbruecke-dentallabor-norderstedt-3', 'Ober- und Unterkiefer mit All-on-X-Versorgung aus dem Labor in Norderstedt')],
     faq=[
       ('Welches Dentallabor in der Nähe von Hamburg fertigt All-on-4-Versorgungen?', 'Holistic Smile Design in Norderstedt, Oststraße 120, plant und fertigt All-on-4- und All-on-6-Versorgungen für Zahnarztpraxen in Hamburg, Norderstedt und ganz Deutschland. Das Labor ist montags bis donnerstags von 8 bis 18 Uhr und freitags von 8 bis 15 Uhr unter 040 94369370 erreichbar.'),
       ('Was bedeutet All-on-4?', 'All-on-4 ist ein Behandlungskonzept, bei dem ein zahnloser Kiefer mit einer festsitzenden Brücke auf vier Implantaten versorgt wird. Die hinteren Implantate werden dabei angewinkelt gesetzt, um Knochen zu nutzen und Knochenaufbau zu vermeiden. All-on-6 arbeitet nach demselben Prinzip mit sechs Implantaten.'),
@@ -167,6 +173,9 @@ LEISTUNGEN = [
     technik_alt='3D-gedrucktes Kiefermodell auf dem Arbeitstisch im Dentallabor',
     bild2='3d-drucker-implantatschablonen-dentallabor-norderstedt',
     bild2_alt='3D-Drucker für Implantatschablonen im Dentallabor Norderstedt',
+    galerie=[('implantatschablone-stackable-guide-dentallabor-norderstedt-1', 'Gedruckte Implantatschablone auf dem Modell aus dem Dentallabor Holistic Smile Design'),
+             ('implantatschablone-stackable-guide-dentallabor-norderstedt-2', 'Implantatschablone mit Provisorium auf dem Modell'),
+             ('implantatschablone-stackable-guide-dentallabor-norderstedt-3', 'Einzelteile eines Stackable Guide aus dem 3D-Drucker')],
     faq=[
       ('Wo bekommen Zahnärzte in Hamburg und Norderstedt Implantatschablonen?', 'Holistic Smile Design in Norderstedt, Oststraße 120, fertigt Bohrschablonen und Stackable Guides im eigenen 3D-Drucker für Zahnarztpraxen in Hamburg, Norderstedt und ganz Deutschland. Erreichbar montags bis donnerstags von 8 bis 18 Uhr und freitags von 8 bis 15 Uhr unter 040 94369370.'),
       ('Was ist der Unterschied zwischen einer Bohrschablone und einer Stackable Guide?', 'Eine Bohrschablone führt die Bohrung für einzelne oder mehrere Implantate. Eine Stackable Guide ist ein mehrteiliges System für den zahnlosen Kiefer, bei dem Knochenreduktion, Bohrung und Provisorium über eine gemeinsame Basisschablone geführt werden.'),
@@ -193,7 +202,7 @@ LEISTUNGEN = [
     ],
     ablauf=[
       ('Präparation und Scan', 'Sie präparieren und übermitteln Intraoralscan oder Abformung, dazu Zahnfarbe und Fotos. Für die Farbnahme können Patienten auch ins Labor kommen.'),
-      ('Digitale Konstruktion', 'Holistic Smile Design konstruiert die Versorgung am Bildschirm, mit Blick auf Kontaktpunkte, Okklusion und Mindestwandstärken.'),
+      ('Digitale Konstruktion', 'Holistic Smile Design konstruiert die Versorgung am Bildschirm, mit Blick auf Ästhetik, Kontaktpunkte, Okklusion und Mindestwandstärken.'),
       ('Fräsen und Sintern', 'Die Arbeit wird im Haus gefräst und gesintert. Bei Verblendungen folgt der Schichtaufbau von Hand.'),
       ('Individualisierung und Kontrolle', 'Charakterisierung, Glanzbrand und Endkontrolle auf dem Modell. Danach geht die Arbeit in Ihre Praxis.'),
     ],
@@ -201,13 +210,15 @@ LEISTUNGEN = [
     technik=('Vollkeramik ist metallfrei, lichtdurchlässig und biokompatibel. Für Zahnärzte heißt das: ästhetische Ergebnisse auch im sichtbaren Bereich und keine dunklen Ränder am Zahnfleisch. Holistic Smile Design baut diesen Bereich gezielt aus und verbindet die Präzision der CAD/CAM-Fertigung mit der Handarbeit bei der Individualisierung.', 'Die Farbnahme erfolgt mit Farbring und standardisierter Fotodokumentation. Auf Wunsch kommen Patienten dafür direkt ins Labor nach Norderstedt.'),
     technik_bild='zahnfarbe-bestimmen-vita-farbring-dentallabor-norderstedt',
     technik_alt='Zahntechnikerin mit Farbring zur Bestimmung der Zahnfarbe',
-    bild2='cad-cam-fraesen-zahnersatz-dentallabor-norderstedt',
-    bild2_alt='CAD/CAM-Fräsmaschine bei der Bearbeitung eines Rohlings',
+    bild2=None,  # Metallblank-Foto entfernt (Wunsch Frank Köpp, 01.10.2026), passt nicht zur Vollkeramik
+    bild2_alt='',
+    galerie=[('vollkeramik-zahnbogen-dentallabor-norderstedt-1', 'Vollkeramische Versorgung eines Zahnbogens aus dem Dentallabor Holistic Smile Design'),
+             ('vollkeramik-zahnbogen-dentallabor-norderstedt-2', 'Vollkeramische Arbeit auf dem Modell mit natürlicher Transluzenz')],
     faq=[
       ('Welches Dentallabor in Norderstedt fertigt vollkeramische Arbeiten?', 'Holistic Smile Design in der Oststraße 120, 22844 Norderstedt, fertigt vollkeramische Kronen, Brücken und Veneers für Zahnarztpraxen in Norderstedt, Hamburg und ganz Deutschland. Das Labor ist montags bis donnerstags von 8 bis 18 Uhr und freitags von 8 bis 15 Uhr unter 040 94369370 erreichbar.'),
       ('Was ist der Unterschied zwischen Zirkonoxid und Glaskeramik?', 'Zirkonoxid ist eine hochfeste Oxidkeramik und eignet sich für Kronen, Brücken und Implantatversorgungen auch im Seitenzahnbereich. Glaskeramik ist lichtdurchlässiger und wird vor allem für Veneers, Teilkronen und Einzelkronen im sichtbaren Bereich eingesetzt.'),
       ('Kann die Zahnfarbe im Labor bestimmt werden?', 'Ja. Holistic Smile Design bestimmt die Zahnfarbe auf Wunsch direkt im Labor in Norderstedt, mit Farbring und Fotodokumentation. So sieht der Zahntechniker die Situation selbst und kann die Individualisierung darauf abstimmen.'),
-      ('Wird die Vollkeramik im Labor selbst gefräst?', 'Ja. Holistic Smile Design konstruiert vollkeramische Arbeiten digital und fräst sie auf der eigenen CAD/CAM-Maschine in Norderstedt. Sintern, Verblendung und Individualisierung erfolgen ebenfalls im Haus.'),
+      ('Wird die Vollkeramik im Labor selbst gefräst?', 'Ja. Holistic Smile Design konstruiert vollkeramische Arbeiten digital und fräst sie auf den eigenen CAD/CAM-Fräsmaschinen in Norderstedt. Sintern, Verblendung und Individualisierung erfolgen ebenfalls im Haus.'),
     ],
   ),
   dict(
@@ -217,14 +228,14 @@ LEISTUNGEN = [
     desc='Holistic Smile Design arbeitet zu 98 Prozent digital: Intraoralscan, DVT, CAD-Planung, CAD/CAM-Fräsen und 3D-Druck im eigenen Haus. Digitales Dentallabor für Zahnarztpraxen in Norderstedt und Hamburg.',
     kicker='Leistung 06',
     h1='Digitales Dentallabor in Norderstedt: Vom Intraoralscan bis zur fertigen Arbeit',
-    intro='Holistic Smile Design ist zu 98 Prozent digital aufgestellt. Scandaten, DVT und Fotodokumentation laufen in einer durchgängigen CAD-Planung zusammen, gefertigt wird auf der eigenen Fräsmaschine und im 3D-Drucker. Für Zahnarztpraxen bedeutet das reproduzierbare Passung, kurze Abstimmungswege und nachvollziehbare Daten zu jeder Arbeit.',
+    intro='Holistic Smile Design ist zu 98 Prozent digital aufgestellt. Scandaten, DVT und Fotodokumentation laufen in einer durchgängigen CAD-Planung zusammen, gefertigt wird auf den eigenen Fräsmaschinen und im 3D-Drucker. Für Zahnarztpraxen bedeutet das reproduzierbare Passung, kurze Abstimmungswege und nachvollziehbare Daten zu jeder Arbeit.',
     hero='zahntechnikermeister-cad-arbeitsplatz-norderstedt',
     hero_alt='Zahntechnikermeister Frank Köpp am CAD-Arbeitsplatz im digitalen Dentallabor Norderstedt',
     fuer_h2='So arbeitet Holistic Smile Design mit digitalen Praxen zusammen',
     fuer=[
       ('Intraoralscan statt Abformung', 'Scandaten der gängigen Intraoralscanner werden direkt übernommen. Welche Schnittstelle Ihre Praxis nutzt, klärt das Labor vor der ersten Arbeit.'),
       ('DVT und Fotos im Datensatz', 'Für Implantatplanung und Ästhetik werden DVT und Fotodokumentation mit dem Scan überlagert.'),
-      ('Fertigung im Haus', 'CAD/CAM-Fräsmaschine, 3D-Drucker und Sinterofen stehen im Labor in Norderstedt. Kein Versand an Fertigungszentren.'),
+      ('Fertigung im Haus', 'CAD/CAM-Fräsmaschinen, 3D-Drucker und Sinterofen stehen im Labor in Norderstedt. Kein Versand an Fertigungszentren.'),
       ('Nachvollziehbare Daten', 'Zu jeder Arbeit liegt der Planungsdatensatz vor. Nacharbeiten, Erweiterungen und Ersatz lassen sich daraus ableiten.'),
     ],
     ablauf=[
@@ -238,9 +249,9 @@ LEISTUNGEN = [
     technik_bild='fotodokumentation-zahnfarbe-dentallabor-norderstedt',
     technik_alt='Fotodokumentation einer zahntechnischen Arbeit im Fotostudio des Labors',
     bild2='intraoralscanner-digitaler-workflow-dentallabor-norderstedt',
-    bild2_alt='Digitaler Arbeitsplatz mit Scanner im Dentallabor Norderstedt',
+    bild2_alt='Gesichtsscanner im digitalen Dentallabor Holistic Smile Design in Norderstedt',
     faq=[
-      ('Welches digitale Dentallabor gibt es in Norderstedt bei Hamburg?', 'Holistic Smile Design in der Oststraße 120, 22844 Norderstedt, ist ein zu 98 Prozent digital aufgestelltes Meisterlabor mit CAD/CAM-Fräsmaschine und 3D-Druckern im eigenen Haus. Es beliefert Zahnarztpraxen in Norderstedt, Hamburg und ganz Deutschland. Erreichbar montags bis donnerstags von 8 bis 18 Uhr und freitags von 8 bis 15 Uhr unter 040 94369370.'),
+      ('Welches digitale Dentallabor gibt es in Norderstedt bei Hamburg?', 'Holistic Smile Design in der Oststraße 120, 22844 Norderstedt, ist ein zu 98 Prozent digital aufgestelltes Meisterlabor mit CAD/CAM-Fräsmaschinen und 3D-Druckern im eigenen Haus. Es beliefert Zahnarztpraxen in Norderstedt, Hamburg und ganz Deutschland. Erreichbar montags bis donnerstags von 8 bis 18 Uhr und freitags von 8 bis 15 Uhr unter 040 94369370.'),
       ('Welche Intraoralscanner kann das Labor verarbeiten?', 'Holistic Smile Design übernimmt Scandaten der gängigen Intraoralscanner. Welche Schnittstelle oder welches Datenformat Ihre Praxis nutzt, klärt das Labor vor der ersten Zusammenarbeit.'),
       ('Was passiert mit konventionellen Abformungen?', 'Abformungen werden per Post oder Kurier ins Labor geschickt, dort gescannt und in den digitalen Workflow übernommen. Praxen ohne Intraoralscanner können so mit Holistic Smile Design zusammenarbeiten.'),
       ('Was bedeutet ein zu 98 Prozent digitaler Workflow?', 'Bei Holistic Smile Design werden Planung, Konstruktion und Fertigung fast vollständig am Rechner und mit CAD/CAM-Maschinen und 3D-Druckern umgesetzt. Manuelle Schritte bleiben dort, wo sie das Ergebnis verbessern, etwa bei der Individualisierung von Keramik und der Endkontrolle.'),
@@ -275,7 +286,7 @@ def kopf(title, desc, canonical, robots='index,follow', extra=''):
 <link rel="preload" href="fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/einwilligung.css?v=1">
 <link rel="stylesheet" href="assets/barrierefreiheit.css?v=1">
-<link rel="stylesheet" href="assets/stil.css?v=3">
+<link rel="stylesheet" href="assets/stil.css?v=4">
 {konf}
 {extra}
 </head>
@@ -288,7 +299,7 @@ def kopf(title, desc, canonical, robots='index,follow', extra=''):
 
 FUSS = f"""</main>
 {footer}
-<script src="assets/einwilligung.js?v=1" defer></script>
+<script src="assets/einwilligung.js?v=2" defer></script>
 <script src="assets/barrierefreiheit.js?v=1" defer></script>
 <script src="assets/skript.js?v=2" defer></script>
 <script src="assets/statistik.js?v=1" defer></script>
@@ -302,6 +313,21 @@ def bild(name, alt, w=1800, h=1200, lazy=True):
   <source srcset="img/{name}.webp" type="image/webp">
   <img src="img/{name}.jpg" alt="{html.escape(alt)}" width="{w}" height="{h}" {l}>
 </picture>'''
+
+def galerie_html(l):
+    if not l.get('galerie'):
+        return ''
+    bilder = ''.join(f'<li>{bild(n, a)}</li>' for n, a in l['galerie'])
+    return f"""<section class="sektion" aria-labelledby="h-arbeiten">
+  <div class="container">
+    <div class="kopfzeile">
+      <span class="kicker">Aus dem Labor</span>
+      <h2 id="h-arbeiten">{html.escape(l['kurz'])}: Arbeiten von Holistic Smile Design</h2>
+    </div>
+    <ul class="galerie">{bilder}</ul>
+  </div>
+</section>
+"""
 
 def brot(titel):
     return f'<nav class="brot" aria-label="Brotkrumen"><ol><li><a href="index.html">Startseite</a></li><li><a href="index.html#leistungen">Leistungen</a></li><li aria-current="page">{html.escape(titel)}</li></ol></nav>'
@@ -378,11 +404,12 @@ for l in LEISTUNGEN:
   </div>
 </section>
 
+{galerie_html(l)}
 <section class="sektion dunkel" aria-labelledby="h-technik">
   <div class="container utechnik">
     <div class="utechnik-bilder">
       {bild(l['technik_bild'], l['technik_alt'])}
-      {bild(l['bild2'], l['bild2_alt'])}
+      {bild(l['bild2'], l['bild2_alt']) if l.get('bild2') else ''}
     </div>
     <div>
       <span class="kicker">Qualität und Technik</span>
@@ -524,17 +551,28 @@ rechtsseite('barrierefreiheit.html', 'Erklärung zur Barrierefreiheit', 'Erklär
 
 # ---------------------------------------------------------------------------
 # Team-Seite
-# Vornamen und Rollen kommen vom Kunden. Bis dahin stehen gelbe Platzhalter.
-# Die Zuordnung Foto zu Person muss der Kunde bestätigen, auch bei Frank Köpp.
+# Namen, Rollen und Texte von Frank Köpp per Mail am 01.10.2026, Zuordnung nach seinen
+# Beschreibungen (weißes Hemd = Majed, schwarzes T-Shirt = Sebastian, florales Oberteil = Johanna).
 # ---------------------------------------------------------------------------
 TEAM = [
   dict(bild='team-frank-koepp-zahntechnikermeister-dentallabor-norderstedt', name='Frank', rolle='Inhaber, Zahntechnikermeister, M.Sc.',
        text='Zahntechnikermeister und Master of Science in Digitaler Dentaltechnologie. Frank hat Holistic Smile Design 2023 gegründet und plant komplexe Sanierungen mit Backward Planning, von der ersten Visualisierung bis zur Eingliederung.',
        alt='Frank Köpp, Inhaber und Zahntechnikermeister von Holistic Smile Design in Norderstedt', inhaber=True),
-  dict(bild='team-zahntechnikerin-3-dentallabor-norderstedt', name=None, rolle=None, alt='Mitarbeiterin von Holistic Smile Design im Dentallabor in Norderstedt'),
-  dict(bild='team-zahntechniker-1-dentallabor-norderstedt', name=None, rolle=None, alt='Mitarbeiter von Holistic Smile Design im Dentallabor in Norderstedt'),
-  dict(bild='team-zahntechnikerin-2-dentallabor-norderstedt', name=None, rolle=None, alt='Mitarbeiterin von Holistic Smile Design im Dentallabor in Norderstedt'),
-  dict(bild='team-zahntechniker-4-dentallabor-norderstedt', name=None, rolle=None, alt='Mitarbeiter von Holistic Smile Design im Dentallabor in Norderstedt'),
+  dict(bild='team-nina-zahntechnikermeisterin-dentallabor-norderstedt', name='Nina', rolle='Zahntechnikermeisterin',
+       text='Als Zahntechnikermeisterin verbinde ich traditionelles zahntechnisches Handwerk mit modernster digitaler Präzision. Durch den Einsatz innovativer digitaler Technologien entstehen individuelle, passgenaue und ästhetisch anspruchsvolle Lösungen – mit höchster Sorgfalt und Liebe zum Detail.',
+       alt='Nina, Zahntechnikermeisterin bei Holistic Smile Design in Norderstedt'),
+  dict(bild='team-nadine-zahntechnikerin-dentallabor-norderstedt', name='Nadine', rolle='Zahntechnikerin',
+       text='Ich liebe meinen Beruf und meine Leidenschaft für Ästhetik. Für mich steht Ästhetik an erster Stelle, mit einem hohen Anspruch an Präzision, Qualität und Harmonie. Jedes Detail zählt, denn wahre Ästhetik entsteht dort, wo Perfektion auf Individualität trifft.',
+       alt='Nadine, Zahntechnikerin bei Holistic Smile Design in Norderstedt'),
+  dict(bild='team-zahntechnikerin-2-dentallabor-norderstedt', name='Johanna', rolle='Zahntechnikerin',
+       text='Ich liebe die Kombination aus Präzision, Kreativität und moderner Technik. Besonders spannend finde ich es, aus digitalen Daten und hochwertigen Materialien individuelle Arbeiten herzustellen.',
+       alt='Johanna, Zahntechnikerin bei Holistic Smile Design in Norderstedt'),
+  dict(bild='team-zahntechniker-1-dentallabor-norderstedt', name='Majed', rolle='Zahntechniker',
+       text='Kommunikation. Umdenken. Präzision. Handwerk. Eigencharakter. Das alles gehört untrennbar zum Laboralltag – einem Ort, an dem man seine berufliche Leidenschaft in ihrer gesamten Breite entfalten kann.',
+       alt='Majed, Zahntechniker bei Holistic Smile Design in Norderstedt'),
+  dict(bild='team-zahntechniker-4-dentallabor-norderstedt', name='Sebastian', rolle='Zahntechniker',
+       text='Zahntechniker mit Herzblut und Expertenfokus auf digitale CAD/CAM-Planung sowie hochästhetische Keramikversorgungen. Basti verbindet präzise Zirkon- und Schichttechnik mit modernstem Digital Design für natürlich schöne Endergebnisse.',
+       alt='Sebastian, Zahntechniker bei Holistic Smile Design in Norderstedt'),
 ]
 
 def teamseite():

@@ -214,8 +214,9 @@
           (namen || 'externe Inhalte') + ' einbinden. ' +
           (konf.hinweis || 'Diese Inhalte stammen von Google. Beim Laden wird Ihre IP-Adresse an Google übertragen, deshalb fragen wir vorher.') + '</p>' +
         '<p class="ein-fein">Ihre Wahl gilt 12 Monate und lässt sich jederzeit über ' +
-          '„Cookie-Einstellungen" in der Fußzeile ändern. Es werden keine Werbe- oder ' +
-          'Analysedienste eingesetzt. Mehr dazu in der ' +
+          '„Cookie-Einstellungen" in der Fußzeile ändern. Es werden keine Werbedienste ' +
+          'eingesetzt. Besuche zählen wir mit Matomo auf einem eigenen Server in Deutschland, ' +
+          'ohne Cookies und ohne Weitergabe an Dritte. Mehr dazu in der ' +
           '<a href="' + LINK_DS + '">Datenschutzerklärung</a>.</p>' +
       '</div>' +
       '<div class="ein-fuss">' +
