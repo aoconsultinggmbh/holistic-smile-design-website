@@ -285,7 +285,7 @@ def kopf(title, desc, canonical, robots='index,follow', extra=''):
 <link rel="preload" href="fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/einwilligung.css?v=1">
-<link rel="stylesheet" href="assets/barrierefreiheit.css?v=1">
+<link rel="stylesheet" href="assets/barrierefreiheit.css?v=20261006">
 <link rel="stylesheet" href="assets/stil.css?v=4">
 {konf}
 {extra}
